@@ -1,5 +1,3 @@
 # pingel.org
 
-Projects
-
-- [axle](https://github.com/pingel-org/axle)
+Published to [pingel.org](https://pingel.org)
