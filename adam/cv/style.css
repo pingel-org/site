@@ -1,0 +1,28 @@
+
+.header {
+	width: 80%;
+	max-width: 600px;
+	margin: 0 auto;	
+}
+
+span.company {
+    font-size: 1.1em;
+    font-weight: bold;
+}
+
+span.title {
+    font-style: italic;
+}
+
+span.date {
+    font-style: normal;
+}
+
+span.school {
+    font-size: 1.1em;
+    font-weight: bold;
+}
+
+span.degree {
+    font-style: italic;
+}
