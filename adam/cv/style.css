@@ -65,15 +65,13 @@ a {
     margin-bottom: 1.6rem;
 }
 
-span.company {
-    display: block;
-    margin-bottom: 0.4rem;
+h3.company {
+    margin: 0 0 0.4rem;
     font-size: 1.15em;
-    font-weight: bold;
 }
 
 /* a company continuing an employment lineage within the same block */
-.role + span.company {
+.role + h3.company {
     margin-top: 1.1rem;
 }
 
