@@ -65,7 +65,8 @@ a {
     margin-bottom: 1.6rem;
 }
 
-h3.company {
+h3.company,
+h3.school {
     margin: 0 0 0.4rem;
     font-size: 1.15em;
 }
@@ -101,16 +102,7 @@ li {
 }
 
 .enrollment {
-    margin-bottom: 0.8rem;
-}
-
-span.school {
-    font-size: 1.15em;
-    font-weight: bold;
-}
-
-span.degree {
-    font-style: italic;
+    margin-bottom: 1.6rem;
 }
 
 .project {
