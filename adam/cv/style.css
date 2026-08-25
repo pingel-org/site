@@ -1,13 +1,88 @@
+/* Spacing is margin-driven: the HTML's layout <br>s are neutralized below. */
+
+:root {
+    color-scheme: light dark;
+    --text: #1c1c1c;
+    --muted: #6c6c6c;
+    --link: #2456a4;
+    --rule: #d9d9d9;
+    --bg: #fffdf9;
+}
+
+@media (prefers-color-scheme: dark) {
+    :root {
+        --text: #e6e3de;
+        --muted: #9d9d9d;
+        --link: #8ab4f8;
+        --rule: #3a3a3a;
+        --bg: #171717;
+    }
+}
+
+html {
+    background: var(--bg);
+}
+
+body {
+    max-width: 44rem;
+    margin: 0 auto;
+    padding: 2.5rem 1.5rem 4rem;
+    font-family: Charter, 'Bitstream Charter', Georgia, 'Times New Roman', serif;
+    font-size: 1.0625rem;
+    line-height: 1.55;
+    color: var(--text);
+}
 
 .header {
-	width: 80%;
-	max-width: 600px;
-	margin: 0 auto;	
+    text-align: center;
+}
+
+h1 {
+    margin: 0 0 0.5rem;
+    font-size: 2.1rem;
+}
+
+h2 {
+    margin: 2.2rem 0 0.9rem;
+    padding-bottom: 0.25rem;
+    font-size: 1.35rem;
+    border-bottom: 1px solid var(--rule);
+}
+
+a {
+    color: var(--link);
+    text-decoration-thickness: 1px;
+    text-underline-offset: 2px;
+}
+
+.experience br,
+.education br,
+.projects br {
+    display: none;
+}
+
+.employment {
+    margin-bottom: 1.6rem;
 }
 
 span.company {
-    font-size: 1.1em;
+    display: block;
+    margin-bottom: 0.4rem;
+    font-size: 1.15em;
     font-weight: bold;
+}
+
+/* a company continuing an employment lineage within the same block */
+.role + span.company {
+    margin-top: 1.1rem;
+}
+
+.role {
+    margin-bottom: 0.8rem;
+}
+
+.role:last-child {
+    margin-bottom: 0;
 }
 
 span.title {
@@ -15,14 +90,57 @@ span.title {
 }
 
 span.date {
-    font-style: normal;
+    color: var(--muted);
+}
+
+ul {
+    margin: 0.4rem 0 0;
+    padding-left: 1.4rem;
+}
+
+li {
+    margin: 0.2rem 0;
+}
+
+.enrollment {
+    margin-bottom: 0.8rem;
 }
 
 span.school {
-    font-size: 1.1em;
+    font-size: 1.15em;
     font-weight: bold;
 }
 
 span.degree {
     font-style: italic;
+}
+
+.project {
+    margin-bottom: 0.9rem;
+}
+
+@media print {
+    html {
+        background: #fff;
+    }
+
+    body {
+        max-width: none;
+        padding: 0;
+        font-size: 10.5pt;
+        color: #000;
+    }
+
+    a {
+        color: inherit;
+        text-decoration: none;
+    }
+
+    h2 {
+        break-after: avoid;
+    }
+
+    .role {
+        break-inside: avoid;
+    }
 }
