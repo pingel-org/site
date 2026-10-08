@@ -373,7 +373,8 @@
 <div class="projects">
 
 <div class="project">
-   <a href="https://github.com/The-AI-Alliance/Semiont">Semiont</a>: an open, source-grounded semantic knowledge platform for building and maintaining trusted AI knowledge bases and context layers.
+    <h3 class="project-name"><a href="https://github.com/The-AI-Alliance/Semiont">Semiont</a></h3>
+    An open, source-grounded semantic knowledge platform for building and maintaining trusted AI knowledge bases and context layers
     <ul>
       <li><a href="https://www.youtube.com/watch?v=rLdqQgcZM2Y">Semiont: A Graph-Based, AI-Native Wiki and Annotator</a> [video on youtube] at NODES AI 2026</li>
       <li><a href="https://www.youtube.com/watch?v=F29TFm1Anhg">Semiont: A Semantic Knowledge Framework for Human/Agent Co-Creation</a> [video on youtube] at Graph Exchange in March 2026</li>
@@ -383,7 +384,8 @@
 </div>
 <br>
 <div class="project">
-    <a href="https://axle-lang.org">Axle</a>: a Scala-embedded domain-specific language for scientific computing and machine learning based on Abstract Algebra
+    <h3 class="project-name"><a href="https://axle-lang.org">Axle</a></h3>
+    A Scala-embedded domain-specific language for scientific computing and machine learning based on Abstract Algebra
     <ul>
       <li><a href="https://www.youtube.com/watch?v=YfMmU4JA27c">Lawful AI</a> [video on youtube] at Scale by the Bay in November 2017</li>
       <li><a href="https://www.youtube.com/watch?v=Y6NiPx-YpdE">Axle: A Scala-embedded DSL</a> [video on youtube] at Scala by the Bay in August 2015</li>
@@ -396,7 +398,7 @@
   // The table of contents is built from the page's own headings.
   const tocList = document.createElement('ul');
   let tocSublist;
-  for (const heading of document.querySelectorAll('h2, h3.company, h3.school')) {
+  for (const heading of document.querySelectorAll('h2, h3')) {
     const name = heading.textContent.trim();
     heading.id = name.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '');
     const link = document.createElement('a');
