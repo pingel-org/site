@@ -105,6 +105,20 @@ li {
     margin-bottom: 1.6rem;
 }
 
+details.coursework {
+    margin-top: 0.6rem;
+}
+
+details.coursework summary {
+    color: var(--muted);
+    cursor: pointer;
+}
+
+details.coursework h4 {
+    margin: 0.8rem 0 0;
+    font-size: 1em;
+}
+
 .project {
     margin-bottom: 0.9rem;
 }
@@ -132,5 +146,9 @@ li {
 
     .role {
         break-inside: avoid;
+    }
+
+    details.coursework {
+        display: none;
     }
 }
