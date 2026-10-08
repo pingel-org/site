@@ -16,6 +16,8 @@
 </head>
 <body>
 
+<nav class="toc" aria-label="Contents"></nav>
+
 <div class="header">
 
 <h1>Adam Pingel</h1>
@@ -389,6 +391,32 @@
 </div>
 
 </div>
+
+<script>
+  // The table of contents is built from the page's own headings.
+  const tocList = document.createElement('ul');
+  let tocSublist;
+  for (const heading of document.querySelectorAll('h2, h3.company, h3.school')) {
+    const name = heading.textContent.trim();
+    heading.id = name.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '');
+    const link = document.createElement('a');
+    link.href = '#' + heading.id;
+    link.textContent = name;
+    const item = document.createElement('li');
+    item.append(link);
+    if (heading.tagName === 'H2') {
+      tocList.append(item);
+      tocSublist = null;
+    } else {
+      if (!tocSublist) {
+        tocSublist = document.createElement('ul');
+        tocList.lastElementChild.append(tocSublist);
+      }
+      tocSublist.append(item);
+    }
+  }
+  document.querySelector('nav.toc').append(tocList);
+</script>
 
 </body>
 </html>

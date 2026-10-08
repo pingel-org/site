@@ -123,6 +123,48 @@ details.coursework h4 {
     margin-bottom: 0.9rem;
 }
 
+nav.toc {
+    display: none;
+}
+
+/* shown only where the margin beside the 44rem column can hold it */
+@media screen and (min-width: 78rem) {
+    nav.toc {
+        display: block;
+        position: fixed;
+        top: 2.5rem;
+        left: calc(50% - 38rem);
+        width: 13rem;
+        max-height: calc(100vh - 5rem);
+        overflow-y: auto;
+        font-size: 0.85rem;
+        line-height: 1.35;
+    }
+
+    nav.toc ul {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+    }
+
+    nav.toc ul ul {
+        padding-left: 0.8rem;
+    }
+
+    nav.toc li {
+        margin: 0.35rem 0;
+    }
+
+    nav.toc a {
+        color: var(--muted);
+        text-decoration: none;
+    }
+
+    nav.toc a:hover {
+        color: var(--text);
+    }
+}
+
 @media print {
     html {
         background: #fff;
