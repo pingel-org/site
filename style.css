@@ -44,6 +44,7 @@ h1 {
 
 .summary {
     margin: 0;
+    text-wrap: balance;
 }
 
 h2 {
