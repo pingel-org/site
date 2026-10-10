@@ -75,6 +75,13 @@ h3 {
     font-size: 1.15em;
 }
 
+/* the organization's own site as archived during the period */
+.era {
+    margin-bottom: 0.4rem;
+    font-size: 0.9em;
+    color: var(--muted);
+}
+
 /* a company continuing an employment lineage within the same block */
 .role + h3.company {
     margin-top: 1.1rem;
