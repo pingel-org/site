@@ -7,6 +7,10 @@
     --link: #2456a4;
     --rule: #d9d9d9;
     --bg: #fffdf9;
+    --north-carolina: #7d9f7d;
+    --san-francisco: #c58f5c;
+    --los-angeles: #b47f97;
+    --peninsula: #7392b8;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -61,7 +65,6 @@ a {
 }
 
 .experience br,
-.education br,
 .projects br {
     display: none;
 }
@@ -134,6 +137,11 @@ details.coursework h4 {
     margin-bottom: 1.6rem;
 }
 
+/* where I was living: a bar in the right margin, never shown in the text flow */
+aside.residence {
+    display: none;
+}
+
 nav.toc {
     display: none;
 }
@@ -173,6 +181,56 @@ nav.toc {
 
     nav.toc a:hover {
         color: var(--text);
+    }
+}
+
+/* the bar's height is set by the script in the page, from one marker to the next */
+@media screen and (min-width: 62rem) {
+    aside.residence {
+        display: block;
+        position: absolute;
+        left: calc(50% + 22.75rem);
+        width: 6.5rem;
+        box-sizing: border-box;
+        padding-left: 0.9rem;
+        font-size: 0.8rem;
+        line-height: 1.35;
+        color: var(--muted);
+    }
+
+    aside.residence::before {
+        content: '';
+        position: absolute;
+        left: 0;
+        top: 0;
+        bottom: 0.8rem;
+        width: 0.4rem;
+    }
+
+    aside.residence.north-carolina::before {
+        background: var(--north-carolina);
+    }
+
+    aside.residence.san-francisco::before {
+        background: var(--san-francisco);
+    }
+
+    aside.residence.los-angeles::before {
+        background: var(--los-angeles);
+    }
+
+    aside.residence.peninsula::before {
+        background: var(--peninsula);
+    }
+
+    aside.residence p {
+        position: sticky;
+        top: 1rem;
+        margin: 0;
+    }
+
+    aside.residence span {
+        display: block;
     }
 }
 
