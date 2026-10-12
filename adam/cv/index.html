@@ -16,7 +16,15 @@
 </head>
 <body>
 
-<nav class="toc" aria-label="Contents"></nav>
+<nav class="toc" aria-label="History">
+    <h2>History</h2>
+    <fieldset class="filter">
+        <label><input type="checkbox" name="full-time" checked> Full-Time</label>
+        <label><input type="checkbox" name="consulting" checked> Consulting</label>
+        <label><input type="checkbox" name="student" checked> Student</label>
+        <label><input type="checkbox" name="project" checked> Project</label>
+    </fieldset>
+</nav>
 
 <div class="header">
 
@@ -56,15 +64,17 @@ Focused on open, source-grounded knowledge systems that humans and AI agents bui
 <div class="project">
     <h2 class="project-name">Semiont</h2>
     <div><a href="https://github.com/The-AI-Alliance/Semiont">https://github.com/The-AI-Alliance/Semiont</a></div>
-    <span class="title">Creator and lead developer</span>,
-    <span class="date">July 2025 - Present</span>
-    <div>An open, source-grounded semantic knowledge platform for building and maintaining trusted AI knowledge bases and context layers</div>
-    <ul>
-      <li><a href="https://www.youtube.com/watch?v=rLdqQgcZM2Y">Semiont: A Graph-Based, AI-Native Wiki and Annotator</a> [video on youtube] at NODES AI 2026</li>
-      <li><a href="https://www.youtube.com/watch?v=F29TFm1Anhg">Semiont: A Semantic Knowledge Framework for Human/Agent Co-Creation</a> [video on youtube] at Graph Exchange in March 2026</li>
-      <li><a href="https://www.youtube.com/watch?v=ifwrjhNm668">Semiont: an Annotated Semantic Layer</a> [video on youtube] at a Neo4j Live online session in 2026</li>
-      <li><a href="https://www.youtube.com/watch?v=oXAyn-ajfak">Human/Agent Co-Creation of Shared Knowledge with Semiont</a> [video on youtube] at The AI Conference in September 2025</li>
-    </ul>
+    <div class="role">
+        <span class="title">Creator and lead developer</span>,
+        <span class="date">July 2025 - Present</span>
+        <div>An open, source-grounded semantic knowledge platform for building and maintaining trusted AI knowledge bases and context layers</div>
+        <ul>
+          <li><a href="https://www.youtube.com/watch?v=rLdqQgcZM2Y">Semiont: A Graph-Based, AI-Native Wiki and Annotator</a> [video on youtube] at NODES AI 2026</li>
+          <li><a href="https://www.youtube.com/watch?v=F29TFm1Anhg">Semiont: A Semantic Knowledge Framework for Human/Agent Co-Creation</a> [video on youtube] at Graph Exchange in March 2026</li>
+          <li><a href="https://www.youtube.com/watch?v=ifwrjhNm668">Semiont: an Annotated Semantic Layer</a> [video on youtube] at a Neo4j Live online session in 2026</li>
+          <li><a href="https://www.youtube.com/watch?v=oXAyn-ajfak">Human/Agent Co-Creation of Shared Knowledge with Semiont</a> [video on youtube] at The AI Conference in September 2025</li>
+        </ul>
+    </div>
 </div>
 
 <br>
@@ -215,13 +225,15 @@ Focused on open, source-grounded knowledge systems that humans and AI agents bui
     <h2 class="project-name">Axle</h2>
     <div><a href="https://github.com/pingel-org/axle">https://github.com/pingel-org/axle</a></div>
     <div><a href="https://axle-lang.org">https://axle-lang.org</a></div>
-    <span class="title">Creator and lead developer</span>,
-    <span class="date">February 2011 - May 2022</span>
-    <div>A Scala-embedded domain-specific language for scientific computing and machine learning based on Abstract Algebra</div>
-    <ul>
-      <li><a href="https://www.youtube.com/watch?v=YfMmU4JA27c">Lawful AI</a> [video on youtube] at Scale by the Bay in November 2017</li>
-      <li><a href="https://www.youtube.com/watch?v=Y6NiPx-YpdE">Axle: A Scala-embedded DSL</a> [video on youtube] at Scala by the Bay in August 2015</li>
-    </ul>
+    <div class="role">
+        <span class="title">Creator and lead developer</span>,
+        <span class="date">February 2011 - May 2022</span>
+        <div>A Scala-embedded domain-specific language for scientific computing and machine learning based on Abstract Algebra</div>
+        <ul>
+          <li><a href="https://www.youtube.com/watch?v=YfMmU4JA27c">Lawful AI</a> [video on youtube] at Scale by the Bay in November 2017</li>
+          <li><a href="https://www.youtube.com/watch?v=Y6NiPx-YpdE">Axle: A Scala-embedded DSL</a> [video on youtube] at Scala by the Bay in August 2015</li>
+        </ul>
+    </div>
 </div>
 <br>
 
@@ -242,7 +254,7 @@ Focused on open, source-grounded knowledge systems that humans and AI agents bui
 </div>
 <br>
 
-<div class="employment">
+<div class="employment consulting">
     <aside class="residence los-angeles"><p>Los Angeles <span>2002 - 2009</span></p></aside>
     <h2 class="company">Adam Pingel Consulting</h2>
     <br>
@@ -432,6 +444,7 @@ Focused on open, source-grounded knowledge systems that humans and AI agents bui
     link.textContent = name;
     const item = document.createElement('li');
     item.append(link);
+    item.className = heading.closest('.employment, .enrollment, .project').className;
     tocList.append(item);
   }
   document.querySelector('nav.toc').append(tocList);
