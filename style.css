@@ -30,7 +30,7 @@ html {
 body {
     max-width: 44rem;
     margin: 0 auto;
-    padding: 2.5rem 1.5rem 4rem;
+    padding: 3.75rem 1.5rem 4rem;
     font-family: Charter, 'Bitstream Charter', Georgia, 'Times New Roman', serif;
     font-size: 1.0625rem;
     line-height: 1.55;
@@ -52,7 +52,7 @@ h1 {
 }
 
 .links {
-    margin: 0.6rem 0 0;
+    margin: 1.1rem 0 0;
     padding: 0;
     list-style: none;
     text-wrap: balance;
@@ -83,7 +83,7 @@ a {
 }
 
 .timeline {
-    margin-top: 2.2rem;
+    margin-top: 3.2rem;
 }
 
 .timeline br {
@@ -187,10 +187,10 @@ nav.toc {
     nav.toc {
         display: block;
         position: fixed;
-        top: 2.5rem;
+        top: 3.75rem;
         left: calc(50% - 38rem);
         width: 13rem;
-        max-height: calc(100vh - 5rem);
+        max-height: calc(100vh - 6.25rem);
         overflow-y: auto;
         font-size: 0.85rem;
         line-height: 1.35;
