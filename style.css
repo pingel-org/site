@@ -167,10 +167,10 @@ aside.residence {
 
 /* An unchecked kind is emptied, not removed, so a residence marker inside it keeps its place.
    The contents list carries the same classes, so its items follow. */
-body:has(input[name="full-time"]:not(:checked)) .employment:not(.consulting),
+body:has(input[name="employment"]:not(:checked)) .employment:not(.consulting),
 body:has(input[name="consulting"]:not(:checked)) .consulting,
-body:has(input[name="student"]:not(:checked)) .enrollment,
-body:has(input[name="project"]:not(:checked)) .project {
+body:has(input[name="education"]:not(:checked)) .enrollment,
+body:has(input[name="projects"]:not(:checked)) .project {
     margin: 0;
 
     > :not(aside) {
