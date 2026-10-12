@@ -51,6 +51,24 @@ h1 {
     text-wrap: balance;
 }
 
+.links {
+    margin: 0.6rem 0 0;
+    padding: 0;
+    list-style: none;
+    text-wrap: balance;
+}
+
+.links li {
+    display: inline;
+    white-space: nowrap;
+}
+
+.links li:not(:last-child)::after {
+    content: "\00b7";
+    margin: 0 0.5em;
+    color: var(--muted);
+}
+
 h2 {
     margin: 2.2rem 0 0.9rem;
     padding-bottom: 0.25rem;
@@ -64,8 +82,11 @@ a {
     text-underline-offset: 2px;
 }
 
-.experience br,
-.projects br {
+.timeline {
+    margin-top: 2.2rem;
+}
+
+.timeline br {
     display: none;
 }
 
@@ -73,9 +94,11 @@ a {
     margin-bottom: 1.6rem;
 }
 
-h3 {
+.timeline h2 {
     margin: 0 0 0.4rem;
-    font-size: 1.15em;
+    padding: 0;
+    border: 0;
+    font-size: 1.25rem;
 }
 
 /* the organization's own site as archived during the period */
@@ -86,7 +109,7 @@ h3 {
 }
 
 /* a company continuing an employment lineage within the same block */
-.role + h3.company {
+.role + h2.company {
     margin-top: 1.1rem;
 }
 
@@ -128,7 +151,7 @@ details.coursework summary {
     cursor: pointer;
 }
 
-details.coursework h4 {
+details.coursework h3 {
     margin: 0.8rem 0 0;
     font-size: 1em;
 }
@@ -164,10 +187,6 @@ nav.toc {
         margin: 0;
         padding: 0;
         list-style: none;
-    }
-
-    nav.toc ul ul {
-        padding-left: 0.8rem;
     }
 
     nav.toc li {
